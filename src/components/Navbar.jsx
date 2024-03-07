@@ -10,6 +10,7 @@ function Navbar() {
     setScore,
     shuffle,
     index,
+    setIndex,
     category,
     setCategory,
   } = useContext(QuizContext);
@@ -41,6 +42,7 @@ function Navbar() {
               onFocus={() => setCategory(cat)}
               onClick={() => {
                 getQuiz(cat);
+                setIndex(0);
                 setScore(0);
               }}
             >
